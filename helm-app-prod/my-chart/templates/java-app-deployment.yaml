@@ -12,7 +12,6 @@ spec:
       labels:
         app: {{ .Release.Name }}-my-app-prod
     spec:
-      serviceAccountName: vault
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
